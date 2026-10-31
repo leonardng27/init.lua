@@ -17,7 +17,7 @@ vim.opt.inccommand = 'split'
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
-vim.opt.shiftwidth = backup4
+vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 vim.opt.smartindent = true
@@ -39,13 +39,12 @@ vim.cmd [[
 ]]
 
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp='␣' }
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
-	pattern = '*.c',
-	callback = function()
-vim.g.mapleader = " "
-		vim.keymap.set('i', '(', '() {<Esc><Left><Left>i')
-	end,
+    pattern = '*.c',
+    callback = function()
+        vim.g.mapleader = " "
+        vim.keymap.set('i', '(', '() {<Esc><Left><Left>i')
+    end,
 })
-
