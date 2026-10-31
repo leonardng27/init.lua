@@ -3,6 +3,9 @@ require("mason").setup()
 
 vim.lsp.enable('tsserver')
 vim.lsp.enable('luals')
+vim.lsp.enable('clangd')
+vim.lsp.enable('basedpyright')
+vim.lsp.enable('ruff')
 
 vim.keymap.set('i', '<c-space>', function()
     vim.lsp.completion.get()
